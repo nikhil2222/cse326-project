@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background-color: orange;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: white;
+  color: brown;
+
+}
+
+.header h1 { 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #F95938;
+
+}
+.team1 {
+  
+  border-radius: 20px;
+}
+.team{
+  float: left;
+  padding-left: 250px;
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+
+}
+.leftcolumn2 {   
+  height: 550px;
+  width: 100%;
+  padding-top: 5px;
+}
+.leftcolumn1 {   
+  
+  height: 300px;
+  width: 100%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image 
+.fakeimg1 {
+    float: right;
+}
+*/
+.fakeimg {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+.card0 
+{
+  background-color: ;
+  margin-top: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  
+  margin-top: 20px;
+}
+
+.card1 {
+  background-color: orange;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card2 {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 0 0 50px #ff005b;
+}
+.card5 {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.foote6 {
+  
+  text-align: center;
+  background-color: #5B352D;
+  
+  margin-top: 20px;
+}
+.foot1 {
+  padding: 70px 0;
+  background-color: #E77C69;
+  text-align: center;
+}
+
+.ourservices{
+      top padding: 10px;
+
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.btn{
+  width: 20%;
+  height: 10%;
+  background : none;
+  border:2px solid #3498db;
+  color: orange;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+  border-radius: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+
+  
+}
+
+
+@keyframes slider {
+
+0% {
+  left: 0;
+}
+
+20% {
+  left: 0;
+}
+
+25% {
+  left: -100%;
+}
+
+45% {
+    left: -100%;
+
+}
+
+50% {
+    left: -200%;
+
+}
+
+70% {
+  left: -200%;
+}
+
+75% {
+  left: -300%;
+}
+
+95% {
+  left: -300%;
+}
+
+100% {
+  left: -400%;
+
+}
+
+}
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slider infinite; 
+
+}
+.btn {
+  color: #3498db;
+}
+.btn:hover{
+  color: #fff;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn:hover::before {
+  height: 180%;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+
+  padding: 55px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #5383d3;
+}
+
+
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;;
+}
+
+
+
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="img.png" style="float: left" height="100px" width="100px">
+  <h1>Indian Electricity Portal</h1>
+  <p>Save Today , Survive Tomorrow</p>
+</div>
+
+<div class="topnav">
+  <a href="signup.html"><b>Logout</b>
+   <a href="contact.html" ><b>contact us</a>
+    <a href="help.html">help</a>
+  
+  <a href="about us.html">about us</a>
+  <a href="frontpage.html">home</a></b>
+</div>
+
+<div class="row">
+  <div class="leftcolumn2">
+    <div id="slider" >
+<figure>
+<img src="img1.jfif" height="550px" width="250">
+<img src="image2.jfif" height="550px" width="250">
+<img src="image3.jfif" height="550px" width="250">
+<img src="image4.jfif" height="550px" width="250">
+<img src="image5.jfif" height="550px" width="250">
+</figure> 
+
+</div>
+    
+  </div>
+  <div class="leftcolumn">
+    <div class="card">
+      <h2><font face="Broadway" color = "blue" size=20 ><center><img src="coollogo_com-148591546.gif"></h2></font> </center>
+      <h5><center><font size = 15 ><i>Some ways to save electricity</h5></center></font></i>
+      <div class="fakeimg1" style="height:250px" ><center></center><img src="save.jfif" width="1000px" height="250px" padding="5px" ></div></center>
+     
+      <ol>
+        
+        <li><font face="Script MT" color="red">Turn off unnecessary lights</li></font>
+        <p><font face="Playball" size="4" color="black"><b>Two 100-watt incandescent bulbs switched off an extra two hours per day could save you $15 over a year. Better yet, switch to LED.</p></b></font>
+       <li> <font face="Script MT" color="red">Use natural light</li></font>
+        <p><font face="Playball" size="4" color="black"><b>A single south-facing window can illuminate 20 to 100 times its area. Turning off one 60-watt bulb for four hours a day is a $9 saving over a year.
+       </p></b></font>
+       <li><font face="Script MT" color="red">Use task lighting</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Turn off ceiling lights and use table lamps, track lighting and under-counter lights in work and hobby areas as well as in kitchens.</p></b></font>
+       <li><font face="Script MT" color="red">Take shorter showers</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Hot water is expensive. If two people in your home cut their shower time by a minute each, you could save $30 over a year.</p></b></font>
+       <li><font face="Script MT" color="red">Turn water off when shaving, washing hands, brushing teeth</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Reduce your hot water usage by 5% to save about $19.</p></b></font>
+       <li><font face="Script MT" color="red">Fix that leaky faucet</li></font>
+       <p><font face="Playball" size="4" color="black"><b> a hot water leak in your faucet can save up to $9 per year in energy costs.</p></b></font>
+       <li><font face="Script MT" color="red">Unplug unused electronics</li></font>
+       <p><font face="Playball" size="4" color="black"><b> power can account for 10% of an average household's annual electricity use. Unplug unused electronics and save $50 a year.</p></b></font>
+       <li><font face="Script MT" color="red">Ditch the desktop computer</li></font>
+       <p><font face="Playball" size="4" color="black"><b> you're still using that old desktop, recycle it and switch to your laptop. If you use your laptop two hours per day, you'll save $4 over a year.</p></b></font>
+       <li><font face="Script MT" color="red">Not home? Turn off the air conditioner</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Turn off that old window unit air conditioner for five hours a day while you're away. Do that for 60 days over a summer and you'll save $16.</p></b></font>
+       <li><font face="Script MT" color="red"> Recycle or donate that old TV</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Recycle or donate your old T.V.. Even if you're just using it an hour a day, that 42-inch LCD is costing you six bucks a year.</p></b></font>
+      <li><font face="Script MT" color="red">Manage your thermostat</li></font>
+       <p><font face="Playball" size="4" color="black"><b>If you have electric heat, lower your thermostat by two degrees to save 5% on your heating bill. Lowering it five degrees could save 10%.  </p></b></font>
+      <li> <font face="Script MT" color="red">Be strategic with window coverings</li></font>
+       <p><font face="Playball" size="4" color="black "><b>Promote airflow through your home and block the afternoon sun. You could save you up to $10 (2 fans) or $45 (1 window unit AC) during the summer.</p></b></font>
+       <li><font face="Script MT" color="red"> Reduce heat in the kitchen</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Avoid using the oven in summer – try salads, smoothies or barbecue. You'll reduce the heat in your home and save on your home cooling costs.</p></b></font>
+       <li><font face="Script MT" color="red">Be efficient with refrigeration</li></font>
+       <p><font face="Playball" size="4" color="black"><b>Keep your fridge and freezer at their ideal temperature. For your fridge this is between 2°C and 3°C and your freezer should be at -18°C.</p></b></font>
+       <li><b><font face="Script MT" color="red">Use the microwave, crock pot or toaster oven</li></font>
+       <p><font face="Playball" size="4" color="black"><b>A microwave takes 15 minutes to do the same job as 1 hour in an oven. Use a microwave instead of your oven 4 times a week and save $13/year.</p></b></font>
+       </font>
+      </ol>
+    </div>
+  </b>
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card0">
+      
+      <div class="fakeimg1" ><img src="modi.jpg" height="230" width=350></div>
+      
+    </div>
+    <div class="card">
+      <div class="card1">
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="GST_Facilitation_Cell.pdf">GST Facilitation Cell</li><br></a>
+        <li><a href="account.html">Account detail</li><br></a>
+        <li><a href="billpayment.html">bill payment</li><br>
+        <li><a href="policies.html">Policies & Publications</li><br></a>
+        <li>Finance & Accounts</li><br>
+        <li>Photo Gallery</li><br>
+        <li>e-Suvidha (Project Management System)</li><br>
+         
+      </ul>
+    </div>
+  </div>
+    <div class="card2">
+      <h3>CURRENT NOTICES</h3>
+      <div class="dat">
+      <ul>
+        <li>25 March<br><br>Appointment to the post of Director   (Technical), Punatsangchhu -I  Hydroelectric Project Authority, Bhutan</li><br><br>
+        <li>02 March<br><br>Appointment to the post of Chairman, Damodar Valley Corporation (DVC) on deputation basis through Search-cum-Selection Committee (SCSC) </li><br><br>
+        <li>03 March<br><br>PUBLIC NOTICE for extension of timeline Draft revised Standard Bidding Documents (SBDs) in connection with selection of Transmission Service Provider (TSP) through Tariff Based Competitive Bidding (TBCB) Extended </li><br><br>
+        <li>05 March<br><br>PUBLIC NOTICE for Draft revised Standard Bidding Documents (SBDs) in connection with selection of Transmission Service Provider (TSP) through Tariff Based Competitive Bidding (TBCB)</li><br><br>
+        <li>27 January<br><br>Reduction in cost of power due to prepayment by end consumers</li><br>
+      </ul>
+    </div> 
+    <div class="date2">
+    <p>.  <br>
+    </p>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+     <div class="leftcolumn1">  
+      <div class="foot1">
+        <font face="algerian" color="yellow" size="20px" >DO YOU NEED ANY HELP IN ELECTRIC MAINTAINANCE?</font>
+        <p><font face="monotype coursiva" size ="10px" color="white">fell free to contact us....</p>
+           <a href="contact.html" ><input class="btn" type="button" name="submit" value="contact us"></a>
+      </font>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="card5">
+     <div class="ourservices">  
+      <div class="services">
+        <font face="algerian" color="purple" size="20px" ><center>OUR TEAM<br><br></center> </font>
+</div>
+        <center>
+          <div class="team"><img src="nikhil.jpg" height="300px" width="300px"><BR><br><font face ="Lucida Sans" size = 5 color = blue ><b>NIKHIL KUMAR<br>(11901729)<b></div>
+          <div class="team1"><img src="saurabh.jpg" height="300px" width="300px" ><br><BR>SAURABH KUMAR<br>(11901727)</div>
+        </div>
+          </center>
+      </font>
+    </div>
+  
+</div>
+<br>
+
+</div>
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>indian electricity<span>department</span></h3>
+
+        <p class="footer-links">
+          <a href="#">Home</a>
+          ·
+          <a href="#">Blog</a>
+          ·
+          <a href="#">Pricing</a>
+          ·
+          <a href="#">About</a>
+          ·
+          <a href="#">Faq</a>
+          ·
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name"> &copy; to electricity department 2020</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>street number 25</span> New delhi , India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91 25478 54698</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>indianelectricitydepartment@gmail.com</span></a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About us</span>
+          We are here for you , and will serve you always.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+</body>
+</html>
