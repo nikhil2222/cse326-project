@@ -202,7 +202,7 @@ a{color:inherit;text-decoration:none}
 					<input id="pass" type="text" class="input">
 				</div>
 				<div class="group">
-					<a href="frontpage.html<input type="submit" class="button" value="Sign Up"></a>
+					<input type="submit" class="button" value="Create Id" onclick="check5()">
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
@@ -227,6 +227,22 @@ function getInfo() {
 
 			
 			
+}
+	function check5() {
+	
+    
+    var b=document.getElementById("pass1").value;
+    var c=document.getElementById("pass2").value;
+    if(b!=c)
+    {
+          alert("password dont match with each other");
+    }
+    else{
+    	alert("Id created");
+    	document.location.href = "frontpage.html";
+    }
+
+	// body...
 }
 
 </script>
